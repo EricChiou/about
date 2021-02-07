@@ -4,12 +4,18 @@ window.onload = () => {
     const keyValueStrAry = search.slice(1).split('&');
     for (const keyValueStr of keyValueStrAry) {
       const keyValue = keyValueStr.split('=');
-      if (keyValue.length === 2 && keyValue[0] === 'style') {
-        try {
-          const style = JSON.parse(keyValue[1]);
-          document.body.style = style;
-        } catch (error) { }
-        break;
+      if (keyValue.length === 2) {
+        switch (keyValue[0]) {
+          case 'color':
+            document.body.style.color = keyValue[1];
+            break;
+          case 'fontSize':
+            document.body.style.fontSize = keyValue[1];
+            break;
+          case 'textAlign':
+            document.body.style.textAlign = keyValue[1];
+            break;
+        }
       }
     }
   }
