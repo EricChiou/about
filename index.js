@@ -23,8 +23,6 @@ window.onload = () => {
 
   const index = Math.ceil(Math.random() * 10);
   document.getElementById('img').src = `./image/${index}.jpg`;
-
-  document.body.innerText = window.location.search;
 };
 
 const imgOnload = () => {
