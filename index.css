@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+html,
+body {
+  font-family: 'Inconsolata', 'Microsoft JhengHei', Arial, Helvetica, sans-serif, monospace;
+}
+
+#img {
+  display: block;
+  max-width: 100%;
+}
