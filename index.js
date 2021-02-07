@@ -1,5 +1,5 @@
 window.onload = () => {
-  const search = window.location.search;
+  const search = decodeURIComponent(window.location.search);
 
   if (search) {
     const keyValueStrAry = search.slice(1).split('&');
