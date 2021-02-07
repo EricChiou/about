@@ -19,5 +19,7 @@ window.onload = () => {
 };
 
 const imgOnload = () => {
-  window.postMessage({ id: 'about', height: document.body.clientHeight });
+  const data = { id: 'about', height: document.body.clientHeight };
+  window.postMessage(data, 'http://localhost:2200/');
+  window.postMessage(data, 'https://www.calicomoomoo.ml/');
 };
