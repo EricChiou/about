@@ -1,8 +1,5 @@
 window.onload = () => {
   const search = window.location.search;
-  document.body.style.color = '#eeeeee';
-  document.body.style.fontSize = '18px';
-  document.body.style.textAlign = 'center';
 
   if (search) {
     const keyValueStrAry = search.slice(1).split('&');
@@ -26,6 +23,8 @@ window.onload = () => {
 
   const index = Math.ceil(Math.random() * 10);
   document.getElementById('img').src = `./image/${index}.jpg`;
+
+  document.body.innerText = window.location.search;
 };
 
 const imgOnload = () => {
