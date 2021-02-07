@@ -1,5 +1,9 @@
 window.onload = () => {
   const search = window.location.search;
+  document.body.style.color = '#eeeeee';
+  document.body.style.fontSize = '18px';
+  document.body.style.textAlign = 'center';
+
   if (search) {
     const keyValueStrAry = search.slice(1).split('&');
     for (const keyValueStr of keyValueStrAry) {
