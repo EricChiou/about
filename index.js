@@ -17,3 +17,7 @@ window.onload = () => {
   const index = Math.ceil(Math.random() * 10);
   document.getElementById('img').src = `./image/${index}.jpg`;
 };
+
+const imgOnload = () => {
+  window.postMessage({ id: 'about', height: document.body.clientHeight });
+};
