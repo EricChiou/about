@@ -23,9 +23,17 @@ window.onload = () => {
 
   const index = Math.ceil(Math.random() * 10);
   document.getElementById('img').src = `./image/${index}.jpg`;
+
+  window.addEventListener('resize', () => {
+    notify();
+  });
 };
 
 const imgOnload = () => {
+  notify();
+};
+
+const notify = () => {
   const data = { id: 'about', height: document.body.clientHeight };
   parent.postMessage(data, '*');
-};
+}
